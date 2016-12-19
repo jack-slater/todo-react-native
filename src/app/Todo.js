@@ -30,16 +30,22 @@ export class Todo extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.heading}>TODO List</Text>
-        <TextInput style={styles.input}
-          value={this.state.newTodo}
-          onChangeText={this.handleChange.bind(this)}
-        />
-        <TouchableOpacity onPress={this.handlePress.bind(this)} style={styles.button} >
-          <Text style={styles.text} >Make</Text>
-        </TouchableOpacity>
-        <View>
+        <View style={styles.form}>
+          <TextInput style={styles.input}
+            value={this.state.newTodo}
+            onChangeText={this.handleChange.bind(this)}
+          />
+          <TouchableOpacity onPress={this.handlePress.bind(this)}
+            style={styles.button} >
+            <Text style={styles.buttonText} >Make</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.todos}>
           {this.state.todos.map((todo, i) => (
-            <Text key={i} style={styles.text} >{todo}</Text>
+            <View style={styles.todo} key={i} >
+              <Text style={styles.todoText} >{todo}</Text>
+            </View>
+
           ))
         }
         </View>

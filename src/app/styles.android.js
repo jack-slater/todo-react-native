@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'whitesmoke',
-    padding: 10
+    padding: 20
   },
   heading: {
     fontSize: 60,
@@ -13,17 +13,41 @@ export const styles = StyleSheet.create({
     fontFamily: 'notoserif'
   },
   input: {
-    backgroundColor: 'yellow',
-    width: (width / 10) * 9,
+    flex: 0.7,
     height: 50,
     alignItems: 'center',
     borderRadius: 5,
-    fontSize: 20
+    fontSize: 24,
+    borderBottomColor: 'lightgrey',
+    borderColor: 'blue',
+    borderRadius: 1
   },
   button: {
-    alignItems: 'center'
+    alignItems: 'center',
+    flex: 0.3,
+    borderWidth: 1,
+    borderColor: 'blue',
+    borderRadius: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 50
   },
-  text: {
-    fontSize: 30
+  buttonText : {
+    fontSize: 24,
+    fontWeight: 'bold'
+  },
+  form: {
+    flexDirection: 'row'
+  },
+  todos: {
+    marginTop: 30
+  },
+  todo: {
+    marginBottom: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey'
+  },
+  todoText: {
+    fontSize: 24
   }
 });
