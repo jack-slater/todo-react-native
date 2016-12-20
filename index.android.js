@@ -8,8 +8,14 @@ import React, { Component } from 'react';
 import { AppRegistry, StyleSheet } from 'react-native';
 import { Todo } from './src/app/Todo';
 import { Reddit } from './src/app/reddit';
+import { Provider } from 'react-redux';
+import { store } from './src/app/store';
 
-const Main = () => (<Reddit />);
+const Main = () => (
+  <Provider store={store}>
+    <Todo />
+  </Provider>
+);
 
 const styles = StyleSheet.create({
   container: {
